@@ -1,0 +1,14 @@
+{
+    "bot1": {
+        "name": "NTX Community Bot",
+        "token": "SEU_TOKEN_AQUI",
+        "owner": "ID_DO_DONO",
+        "status": "offline"
+    },
+    "bot2": {
+        "name": "NTX Helper Bot",
+        "token": "SEU_TOKEN_AQUI",
+        "owner": "ID_DO_DONO",
+        "status": "offline"
+    }
+}
