@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Painel NTX Futurista</title>
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <header>
+        <h1>NTX Futuristic Bot Panel</h1>
+    </header>
+
+    <main>
+        <% for(let botId in bots){ %>
+            <div class="bot-card">
+                <h2><%= bots[botId].name %></h2>
+                <p>Status: <span class="<%= bots[botId].status %>"><%= bots[botId].status %></span></p>
+                <form action="/update-bot" method="POST">
+                    <input type="hidden" name="botId" value="<%= botId %>">
+                    <label>Token</label>
+                    <input type="text" name="token" value="<%= bots[botId].token %>">
+                    <label>Owner</label>
+                    <input type="text" name="owner" value="<%= bots[botId].owner %>">
+                    <button type="submit">Atualizar</button>
+                </form>
+            </div>
+        <% } %>
+    </main>
+</body>
+</html>
